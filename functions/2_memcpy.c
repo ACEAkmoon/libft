@@ -11,7 +11,7 @@ void    *ft_memcpy(void *destptr, const void *srcptr, size_t num)
 {
   while (num--)
     ((char*)destptr)[num] = ((char*)srcptr)[num];
-  return ((char*)destptr); //Ошибка 1 error C4716: ft_memcpy: должна возвращать значение
+  return (0); //Ошибка 1 error C4716: ft_memcpy: должна возвращать значение
 }
 
 void main()

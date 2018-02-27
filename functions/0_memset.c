@@ -13,25 +13,23 @@
 //Функция memset заполняет num байтов блока памяти, через указатель memptr. 
 //Код заполняемого символа передаётся в функцию через параметр val
 
+#include "stdafx.h" //Для работы с VS12 C++11
 #include <stdio.h>
+#include <cstdlib>  //Для работы с функцией system()
 
 void ft_memset(void *memptr, char val, size_t num) 
 {
-    size_t memptr_step = 0;
-    while(num-- > memptr_step)
+    while(num--)
         ((char*)memptr)[num] = val;
 }
 
-/////////////////////////////////////////////////////////
-
-
-int main()
+void main()
 {
   char string[] = "This is a test of the memset function";
   printf("%s\n", string);
   ft_memset(string, '*', 25); // заполнить первые N байт символом '*'
-  printf("%s", string);
-  return 0;
+  printf("%s\n\n", string);
+  system("pause"); // Команда задержки экрана
 }
 
 /////////////////////////////////////////////////////////

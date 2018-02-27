@@ -14,9 +14,6 @@
 
 void	ft_memset(void *memptr, char val, size_t num)
 {
-	size_t	memptr_step;
-
-	memptr_step = 0;
-	while (num-- > memptr_step)
+	while (num--)
 		((char*)memptr)[num] = val;
 }

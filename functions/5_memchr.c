@@ -4,19 +4,18 @@
 #include "stdafx.h" //Для работы с VS12 C++11
 #include <stdio.h>
 #include <cstdlib>  //Для работы с функцией system()
-#include <string.h> //?! Для работы с функцией memccpy() or VS12 C++11
 
 void  *ft_memchr(const void *memptr, int val, size_t num)
 {
   size_t step = 0;
 
-  while (step < num)
+  while(step < num)
   {
     if(((char*)memptr)[step] == (char)val) 
       return ((char*)memptr + step);
     step++;
   }
-  return (0); //Ошибка 1 error C4716: ft_memccpy: должна возвращать значение
+  return(0); //Ошибка 1 error C4716: ft_memccpy: должна возвращать значение
 }
 
 void main()

@@ -13,7 +13,7 @@ void    *ft_memccpy(void *destptr, const void *srcptr, int stop, size_t num)
 {
   size_t step = 0;
 
-  while (step < num)
+  while(step < num)
   {
     ((char*)destptr)[step] = ((char*)srcptr)[step];
     if(((char*)srcptr)[step] == (char)stop) 

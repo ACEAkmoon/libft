@@ -7,7 +7,7 @@
 
 #include "stdafx.h" //Для работы с VS12 C++11
 #include <stdio.h>
-#include <cstdlib>  //Для работы с функцией system()
+#include <cstdlib>  //Для работы с функцией system("pause")
 
 int ft_memcmp(const void *memptr1, const void *memptr2, size_t num)
 {
@@ -37,4 +37,5 @@ void main()
     printf("'%s' is < than '%s'.\n", buffer1, buffer2);
   else
     printf("ERROR FUNCTION");
+  system("pause");
 }

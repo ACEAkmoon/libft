@@ -1,9 +1,10 @@
 //Функция memchr в num байтах блока памяти, адресуемого указателем memptr, 
 //ищет первое вхождение val, и возвращает указатель на найденный символ
 
-#include "stdafx.h" //Для работы с VS12 C++11
-#include <stdio.h>
-#include <cstdlib>  //Для работы с функцией system()
+#include "../libft.h"
+//#include "stdafx.h" //Для работы с VS12 C++11
+//#include <stdio.h>
+//#include <cstdlib>  //Для работы с функцией system()
 
 void  *ft_memchr(const void *memptr, int val, size_t num)
 {
@@ -17,7 +18,7 @@ void  *ft_memchr(const void *memptr, int val, size_t num)
   }
   return(0); //Ошибка 1 error C4716: ft_memccpy: должна возвращать значение
 }
-
+/*
 void main()
 {
   char search = ')';
@@ -29,7 +30,7 @@ void main()
     printf ("'%c' found at position %d.\n", search, pch-memptr+1);
   else
     printf ("not found '%c'.\n\n", search);
-  system("pause"); // Команда задержки экрана
+  //system("pause"); // Команда задержки экрана
 }
 
 
@@ -46,4 +47,4 @@ void  *ft_memchr(const void *memptr, int val, size_t num)
     bufer++;
   }
   return (0); //Ошибка 1 error C4716: ft_memccpy: должна возвращать значение
-}
+}*/

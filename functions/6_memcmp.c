@@ -5,9 +5,10 @@
 //Функция memcmp начинает сравнивать по одному байту и как только будут найдены первые неодинаковые символы, 
 //функция проанализирует числовой код этих символов. Чей код окажется больше, тот блок памяти и будет считаться больше.
 
-#include "stdafx.h" //Для работы с VS12 C++11
-#include <stdio.h>
-#include <cstdlib>  //Для работы с функцией system("pause")
+#include "../libft.h"
+//#include "stdafx.h" //Для работы с VS12 C++11
+//#include <stdio.h>
+//#include <cstdlib>  //Для работы с функцией system("pause")
 
 int ft_memcmp(const void *memptr1, const void *memptr2, size_t num)
 {
@@ -21,7 +22,7 @@ int ft_memcmp(const void *memptr1, const void *memptr2, size_t num)
   }
   return (0); //Ошибка 1 error C4716: должна возвращать значение
 }
-
+/*
 void main()
 {
   char buffer1[13] = "DWgaOtP12df0";
@@ -37,5 +38,6 @@ void main()
     printf("'%s' is < than '%s'.\n", buffer1, buffer2);
   else
     printf("ERROR FUNCTION");
-  system("pause");
+  //system("pause");
 }
+*/

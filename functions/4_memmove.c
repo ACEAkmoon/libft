@@ -3,9 +3,10 @@
 //место назначения -> destptr = destination 
 //источник -> srcptr = source
 
-#include "stdafx.h" //Для работы с VS12 C++11
-#include "libft.h"
-#include <cstdlib>  //Для работы с функцией system("pause")
+#include "../libft.h"
+//#include "stdafx.h" //Для работы с VS12 C++11
+//#include "libft.h"
+//#include <cstdlib>  //Для работы с функцией system("pause")
 
 void  *ft_memmove(void *destptr, const void *srcptr, size_t num)
 {
@@ -15,7 +16,7 @@ void  *ft_memmove(void *destptr, const void *srcptr, size_t num)
   ft_memcpy(destptr, bufer, num);
   return (0);
 }
-
+/*
 void main()
 {
   bool test_0 = true;
@@ -37,5 +38,6 @@ void main()
     ft_memmove(dest, src, 26);
     printf("string after: %s\n\n", dest);
   }
-  system("pause");
+  //system("pause");
 }
+*/

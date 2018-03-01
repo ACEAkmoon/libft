@@ -4,10 +4,11 @@
 //место назначения -> destptr = destination 
 //источник -> srcptr = source
 
-#include "stdafx.h" //Для работы с VS12 C++11
+#include "../libft.h"
+//#include "stdafx.h" //Для работы с VS12 C++11
 #include <stdio.h>
-#include <cstdlib>  //Для работы с функцией system()
-#include <string.h> //?! Для работы с функцией memccpy() or VS12 C++11
+//#include <cstdlib>  //Для работы с функцией system()
+//#include <string.h> //?! Для работы с функцией memccpy() or VS12 C++11
 
 void    *ft_memccpy(void *destptr, const void *srcptr, int stop, size_t num)
 {
@@ -25,7 +26,7 @@ void    *ft_memccpy(void *destptr, const void *srcptr, int stop, size_t num)
   } 
   return (0); //Ошибка 1 error C4716: ft_memccpy: должна возвращать значение
 }
-
+/*
 void main()
 {
   bool test_0 = true;
@@ -43,5 +44,6 @@ void main()
     ft_memccpy(destptr, srcptr, ':', 30);
     printf("%s\n%s\n\n", srcptr, destptr);
   }
-  system("pause"); // Команда задержки экрана
+  //system("pause"); // Команда задержки экрана
 }
+*/

@@ -10,23 +10,26 @@
 #                                                                              #
 # **************************************************************************** #
 
-CC = gcc
+CC		= gcc
 
-NAME = libft.a
+NAME	= libft.a
 
-SRC = functions/*.c
+SRC		= functions/*.c
 
-HEADER = libft.h
+HEADER	= libft.h
 
-OBJ = *.o
+OBJ		= *.o *.gch
+#OBJ  = $(SRC:.c=.o)
+
+RM		= rm -f
 
 # CFLAGS = -c -Wall -Wextra -Werror
 # key >> '-c' - Эта опция означает, что необходима только компиляция.
 # Из исходных файлов программы создаются объектные файлы в виде name.o. 
 # Компоновка не производится.
-CFLAGS = -c -Wall -Wextra -Werror
+CFLAGS	= -c -Wall -Wextra -Werror
 
-all: $(NAME)
+all:	$(NAME)
 
 # ar - стандартная утилита Unix, архиватор, не использующий сжатия данных.
 # key >> 'r' - Вставляет файлы в архив (с замещением);
@@ -36,18 +39,18 @@ all: $(NAME)
 # библиотека объектных файлов. Так что возьмем за правило тот факт, что утилиту 
 # 'ranlib' надо запускать в любом случае, даже если он нее нет никакого эффекта. 
 $(NAME):
-	$(CC) $(CFLAGS) $(SRC) $(HEADER)
-	ar rc $(NAME) $(OBJ) 
-	ranlib $(NAME)
+		$(CC) $(CFLAGS) $(SRC) $(HEADER)
+		ar rc $(NAME) $(OBJ) 
+		ranlib $(NAME)
 
 clean:
-	/bin/rm -f $(OBJ)
+		$(RM) $(OBJ)
 
 fclean: clean
-	/bin/rm -f $(NAME)
+		$(RM) $(NAME)
 
-re: fclean all
+re:		fclean all
 
 # make будет запускать свой рецепт безоговорочно, независимо от того, 
 # существует ли файл с таким именем: цель 'clean' объявляется абстрактной.
-.PHONY: clean fclean re
+.PHONY:	clean fclean re

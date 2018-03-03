@@ -15,7 +15,7 @@
 
 #include "../libft.h"
 //#include "stdafx.h" //Для работы с VS12 C++11
-#include <stdio.h>
+//#include <stdio.h>
 //#include <cstdlib>  //Для работы с функцией system()
 
 void  *ft_memset(void *memptr, char val, size_t num)

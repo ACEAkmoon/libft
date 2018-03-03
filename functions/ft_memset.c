@@ -10,9 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-//#include <stdio.h>
-
 void	*ft_memset(void *memptr, char val, size_t num)
 {
 	while (num--)

@@ -1,8 +1,9 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <string.h>
 # include <stdio.h>
+# include <stdlib.h>
+# include <string.h>
 
 void 			*ft_memset(void *memptr, char val, size_t num);
 void			ft_bzero(void *memptr, size_t num);

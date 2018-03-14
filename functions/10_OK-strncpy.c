@@ -32,8 +32,8 @@ char	*ft_strncpy(char *destptr, char *srcptr, unsigned int num)
 /*
 void main()
 {
-  char string_0[] = "";
-  char string_1[38] = "This is a test of the memset function";
+  char string_0[38] = "";
+  char string_1[38] = "This is a test of the strncpy function";
   printf("%s\n%s", string_0, string_1);
   ft_strncpy(string_0, string_1, 38);
   printf("\n\n%s\n\n", string_0);

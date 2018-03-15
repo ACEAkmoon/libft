@@ -12,7 +12,8 @@
 char    *ft_strncat(char *destptr, char *srcptr, int num)
 {
   char bufer[num];
-  ft_strncpy(bufer, srcptr, num);
+  //ft_strncpy(bufer, srcptr, num); //Вариант 1: - копируем символы (с заполнением bufer-масива нулями в размере NUM)
+  ft_memcpy(bufer, srcptr, num);  //Вариант 2: - копируем байти (бистрее)
   bufer[num] = '\0';
   ft_strcat(destptr, bufer);
   return (0);

@@ -13,18 +13,18 @@
 
 char	*ft_strncpy(char *destptr, char *srcptr, unsigned int num)
 {
-	unsigned int	symbol;
+	unsigned int	step;
 
-	symbol = 0;
-	while (symbol < num && srcptr[symbol])
+	step = 0;
+	while (step < num && srcptr[step])
 	{
-		destptr[symbol] = srcptr[symbol];
-		symbol++;
+		destptr[step] = srcptr[step];
+		step++;
 	}
-	while (symbol < num)
+	while (step < num)
 	{
-		destptr[symbol] = '\0';
-		symbol++;
+		destptr[step] = '\0';
+		step++;
 	}
 	return (destptr);
 }

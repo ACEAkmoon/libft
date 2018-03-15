@@ -10,16 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *destptr, char *srcptr)
+char  *ft_strcpy(char *destptr, char *srcptr)
 {
-	int	symbol;
-
-	symbol = 0;
-	while (srcptr[symbol])
-	{
-		destptr[symbol] = srcptr[symbol];
-		symbol++;
-	}
-	destptr[symbol] = srcptr[symbol];
-	return (destptr);
+  while (*srcptr)
+    *destptr++ = *srcptr++;
+  *destptr = '\0';
+  return (*destptr);
 }

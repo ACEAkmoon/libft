@@ -9,23 +9,13 @@
 //#include <stdio.h>
 //#include <cstdlib>  //Для работы с функцией system("pause")
 
-char	*ft_strncat(char *destptr, char *srcptr, int num)
+char    *ft_strncat(char *destptr, char *srcptr, int num)
 {
-	int	src_step;
-	int	dest_step;
-
-	src_step = 0;
-	dest_step = 0;
-	while (destptr[dest_step])
-		dest_step++;
-	while (srcptr[src_step] && src_step < num)
-	{
-		destptr[dest_step] = srcptr[src_step];
-		dest_step++;
-		src_step++;
-	}
-	destptr[dest_step] = '\0';
-	return (destptr);
+  char bufer[num];
+  ft_strncpy(bufer, srcptr, num);
+  bufer[num] = '\0';
+  ft_strcat(destptr, bufer);
+  return (0);
 }
 /*
 void main()

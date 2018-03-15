@@ -4,9 +4,9 @@
 //место назначения -> destptr = destination 
 //источник -> srcptr = source
 
-#include "../libft.h"
+//#include "../libft.h"
 //#include "stdafx.h" //Для работы с VS12 C++11
-#include <stdio.h>
+//#include <stdio.h>
 //#include <cstdlib>  //Для работы с функцией system()
 
 void    *ft_memcpy(void *destptr, const void *srcptr, size_t num)

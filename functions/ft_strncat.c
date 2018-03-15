@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../libft.h"
+
 char    *ft_strncat(char *destptr, char *srcptr, int num)
 {
   char bufer[num];

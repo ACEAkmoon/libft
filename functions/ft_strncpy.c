@@ -10,20 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *destptr, char *srcptr, unsigned int num)
-{
-	unsigned int	step;
+#include "../libft.h"
 
-	step = 0;
-	while (step < num && srcptr[step])
-	{
-		destptr[step] = srcptr[step];
-		step++;
-	}
-	while (step < num)
-	{
-		destptr[step] = '\0';
-		step++;
-	}
-	return (destptr);
+char    *ft_strncpy(char *destptr, char *srcptr, unsigned int num)
+{
+    unsigned int    save_num;
+
+    save_num = num;
+    while (num-- && *srcptr)
+        *destptr++ = *srcptr++;
+    if (num < save_num)
+      ft_bzero(destptr, num);
+    return (destptr);
 }

@@ -1,7 +1,7 @@
 //Функция memchr в num байтах блока памяти, адресуемого указателем memptr, 
 //ищет первое вхождение val, и возвращает указатель на найденный символ
 
-#include "../libft.h"
+//#include "../libft.h"
 //#include "stdafx.h" //Для работы с VS12 C++11
 //#include <stdio.h>
 //#include <cstdlib>  //Для работы с функцией system()

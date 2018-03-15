@@ -4,9 +4,9 @@
 //место назначения -> destptr = destination 
 //источник -> srcptr = source
 
-#include "../libft.h"
+//#include "../libft.h"
 //#include "stdafx.h" //Для работы с VS12 C++11
-#include <stdio.h>
+//#include <stdio.h>
 //#include <cstdlib>  //Для работы с функцией system()
 //#include <string.h> //?! Для работы с функцией memccpy() or VS12 C++11
 

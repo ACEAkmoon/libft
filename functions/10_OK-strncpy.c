@@ -11,22 +11,16 @@
 //#include <stdio.h>
 //#include <cstdlib>  //Для работы с функцией system("pause")
 
-char	*ft_strncpy(char *destptr, char *srcptr, unsigned int num)
+char    *ft_strncpy(char *destptr, char *srcptr, unsigned int num)
 {
-	unsigned int	step;
+    unsigned int    save_num;
 
-	step = 0;
-	while (step < num && srcptr[step])
-	{
-		destptr[step] = srcptr[step];
-		step++;
-	}
-	while (step < num)
-	{
-		destptr[step] = '\0';
-		step++;
-	}
-	return (destptr);
+    save_num = num;
+    while (num-- && *srcptr)
+        *destptr++ = *srcptr++;
+    if (num < save_num)
+      ft_bzero(destptr, num);
+    return (destptr);
 }
 
 /*

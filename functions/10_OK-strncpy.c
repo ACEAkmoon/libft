@@ -20,7 +20,7 @@ char    *ft_strncpy(char *destptr, char *srcptr, unsigned int num)
         *destptr++ = *srcptr++;
     if (num < save_num)
       ft_bzero(destptr, num);
-    return (destptr);
+    return (0);
 }
 
 /*

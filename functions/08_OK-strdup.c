@@ -5,7 +5,7 @@
 //Функция malloc выделяет блок памяти, размером sizemem байт, и возвращает указатель на начало блока.
 //Содержание выделенного блока памяти не инициализируется, оно остается с неопределенными значениями.
 
-//#include "../libft.h"
+#include "../libft.h"
 //#include "stdafx.h" //Для работы с VS12 C++11
 //#include <stdlib.h>   // Для free or malloc
 //#include <string.h>   // Для strdup
@@ -15,24 +15,11 @@
 
 char  *ft_strdup(const char *srcptr)
 {
-  int   i;
-  int   size;
-  char  *str;
-
-  i = 0;
-  size = 0;
-  while (srcptr[size])
-    size++;
-  str = (char*)malloc(sizeof(*str) * (size));
-  if (str == NULL)
-    return (NULL);
-  while (i < size)
-  {
-    str[i] = srcptr[i];
-    i++;
-  }
-  str[size] = '\0';
-  return (str);
+  char *bufer;
+  
+  bufer = ft_stralloc(srcptr);
+  ft_strcpy(bufer, srcptr);
+  return (bufer);
 }
 /*
 void main()

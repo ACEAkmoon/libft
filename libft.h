@@ -1,9 +1,9 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
-# include <stdlib.h>
-# include <string.h>
+//# include <stdio.h>
+//# include <stdlib.h>
+//# include <string.h>
 
 void 			*ft_memset(void *memptr, char val, size_t num);
 void			ft_bzero(void *memptr, size_t num);
@@ -16,7 +16,7 @@ int				ft_memcmp(const void *memptr1, const void *memptr2, size_t num);
 //void			*ft_memalloc(size_t size);
 //void			ft_memdel(void **ap);
 
-//char			*ft_stralloc(const char *s);
+char			*ft_stralloc(const char *str);
 //char			*ft_strallocc(const char *s, char c);
 //char			*ft_stpcpy(char *dst, const char *src);
 //char			*ft_stpcpyc(char *dst, const char *src, char c);
@@ -28,10 +28,10 @@ int				ft_memcmp(const void *memptr1, const void *memptr2, size_t num);
 int				ft_strlen(char *str);
 char			*ft_strdup(const char *src);
 char			*ft_strcpy(char *destptr, const char *src);
-//char			*ft_strncpy(char *dst, const char *src, size_t n);
-//char			*ft_strcat(char *s1, const char *s2);
-//char			*ft_strncat(char *s1, const char *s2, size_t n);
-//size_t			ft_strlcat(char *dst, const char *src, size_t size);
+char			*ft_strncpy(char *destptr, char *srcptr, unsigned int num);
+char			*ft_strcat(char *destptr, char *srcptr);
+char			*ft_strncat(char *destptr, char *srcptr, int num);
+unsigned int	ft_strlcat(char *destptr, char *srcptr, unsigned int size);
 //char			*ft_strchr(const char *s, int c);
 //char			*ft_strrchr(const char *s, int c);
 //char			*ft_strstr(const char *s1, const char *s2);

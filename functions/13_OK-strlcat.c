@@ -1,6 +1,6 @@
-//strlcat — безопасная замена стандартной функции strcat.
+//strlcat — безопасная замена стандартной функции strcat. size указывает на размер масива
 //strcat  — Об'єднання рядків. Функція додає копію рядка srcptr в кінець рядка destptr.
-//-------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
 //место назначения -> destptr = destination 
 //источник -> srcptr = source
 
@@ -11,20 +11,15 @@
 
 unsigned int    ft_strlcat(char *destptr, char *srcptr, unsigned int size)
 {
-  int step;
+  unsigned int step;
   
-  step= 0;
-  while (*destptr)
-  {
+  step = size;
+  while (*destptr && step > 0 && step--)
     destptr++;
-    step++;
-  }
-  while (*srcptr && step < size - 1)
-  {
+  while (*srcptr && step > 1 && step--)
     *destptr++ = *srcptr++;
-    step++;
-  }
-  *destptr-- = '\0';
+  if (step == 1)
+    *destptr = '\0';
   return (0);
 }
 /*
@@ -33,7 +28,7 @@ void main()
   char string_0[99] = "Here we write down our row: ";
   char string_1[39] = "This is a test of the strncat function";
   printf("%s\n%s", string_0, string_1);
-  ft_strlcat(string_0, string_1, 99);
+  ft_strlcat(string_0, string_1, 50);
   printf("\n\n%s\n\n", string_0);
   //system("pause"); // Команда задержки экрана
 }

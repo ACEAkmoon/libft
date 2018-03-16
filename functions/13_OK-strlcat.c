@@ -4,7 +4,7 @@
 //место назначения -> destptr = destination 
 //источник -> srcptr = source
 
-#include "../libft.h"
+//#include "../libft.h"
 //#include "stdafx.h" //Для работы с VS12 C++11
 //#include <stdio.h>
 //#include <cstdlib>  //Для работы с функцией system("pause")
@@ -17,7 +17,7 @@ unsigned int    ft_strlcat(char *destptr, char *srcptr, unsigned int size)
     *destptr++ = *srcptr++;
   if (size == 1)
     *destptr = '\0';
-  return (0);
+  return (destptr);
 }
 /*
 void main()

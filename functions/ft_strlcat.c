@@ -18,5 +18,5 @@ unsigned int    ft_strlcat(char *destptr, char *srcptr, unsigned int size)
     *destptr++ = *srcptr++;
   if (size == 1)
     *destptr = '\0';
-  return (0);
+  return (destptr);
 }

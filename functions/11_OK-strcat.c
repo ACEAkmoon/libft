@@ -16,7 +16,7 @@ char	*ft_strcat(char *destptr, char *srcptr)
     while (*destptr)
         destptr++;
     ft_strcpy(destptr, srcptr);
-    return (0);
+    return (destptr);
 }
 
 /*

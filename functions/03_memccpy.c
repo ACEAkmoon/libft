@@ -24,7 +24,7 @@ void    *ft_memccpy(void *destptr, const void *srcptr, int stop, size_t num)
     }
     step++;
   } 
-  return (0); //Ошибка 1 error C4716: ft_memccpy: должна возвращать значение
+  return (destptr); //Ошибка 1 error C4716: ft_memccpy: должна возвращать значение
 }
 /*
 void main()

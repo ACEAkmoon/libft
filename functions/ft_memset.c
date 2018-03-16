@@ -14,4 +14,5 @@ void	*ft_memset(void *memptr, char val, size_t num)
 {
 	while (num--)
 		((char*)memptr)[num] = val;
+	return (memptr);
 }

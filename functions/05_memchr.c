@@ -8,8 +8,9 @@
 
 void  *ft_memchr(const void *memptr, int val, size_t num)
 {
-  size_t step = 0;
+  size_t step;
 
+  step = 0;
   while(step < num)
   {
     if(((char*)memptr)[step] == (char)val) 
@@ -22,12 +23,12 @@ void  *ft_memchr(const void *memptr, int val, size_t num)
 void main()
 {
   char search = ')';
-  char *pch;
+  char *result;
   char memptr[22] = "***3ve3dni)e Voyni***";
   printf("%s\n", memptr);
-  pch = ft_memchr(memptr, search, 22);
-  if (pch != NULL)
-    printf ("'%c' found at position %d.\n", search, pch-memptr+1);
+  result = ft_memchr(memptr, search, 22);
+  if (result != NULL)
+    printf ("'%c' found at position %d.\n", search, result-memptr+1);
   else
     printf ("not found '%c'.\n\n", search);
   //system("pause"); // Команда задержки экрана

@@ -14,7 +14,7 @@ void  *ft_memmove(void *destptr, const void *srcptr, size_t num)
   //char *bufer = new char [num]; //multifunctional standard C/CPP/CS
   ft_memcpy(bufer, srcptr, num);
   ft_memcpy(destptr, bufer, num);
-  return (0);
+  return (destptr);
 }
 /*
 void main()

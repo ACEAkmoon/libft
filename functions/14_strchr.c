@@ -16,7 +16,7 @@ const char  *ft_strchr(const char *string, int symbol)
   while (*string)
   {
     if (*string == symbol)
-      return ((char*)string);
+      return (string);
     string++;
   }
   return (0);
@@ -25,7 +25,7 @@ const char  *ft_strchr(const char *string, int symbol)
 void main()
 {
   char search = ')';
-  char *result;
+  const char *result; //  2 IntelliSense: значение типа "const char *" нельзя присвоить сущности типа "char *"
   char memptr[22] = "!**3ve3dni)e Voyni***";
   printf("%s\n", memptr);
   result = ft_strchr(memptr, search);

@@ -3,8 +3,6 @@
 //Завершающий нулевой символ считается частью Си-строки. 
 //Таким образом, он также может быть найден для получения указателя на конец строки.
 //----------------------------------------------------------------------------------
-//место назначения -> destptr = destination 
-//источник -> srcptr = source
 
 //#include "../libft.h"
 //#include "stdafx.h" //Для работы с VS12 C++11
@@ -30,7 +28,7 @@ void main()
   printf("%s\n", memptr);
   result = ft_strchr(memptr, search);
   if (result != NULL)
-    printf ("'%c' found at position %d.\n", search, result-memptr+1);
+    printf ("'%c' found at position: %d.\n", search, result-memptr+1);
   else
     printf ("not found '%c'.\n\n", search);
   //system("pause"); // Команда задержки экрана

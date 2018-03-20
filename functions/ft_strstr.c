@@ -21,10 +21,10 @@ const char	*ft_strstr(const char *string1, char *string2)
   {
     while (*string1 == *bufer)
     {
-      string1++;
-      bufer++;
-      if (!*bufer)
-        return (string1 - ft_strlen(string2));
+    	bufer++;
+    	string1++;
+    	if (!*bufer)
+    		return (string1 - ft_strlen(string2));
     }
     bufer = string2;
     string1++;

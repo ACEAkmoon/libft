@@ -35,8 +35,8 @@ unsigned int	ft_strlcat(char *destptr, char *srcptr, unsigned int size);
 const char		*ft_strchr(const char *string, int symbol);
 const char		*ft_strrchr(const char *string, int symbol);
 const char		*ft_strstr(const char *string1, char *string2);
-//char			*ft_strnstr(const char *s1, const char *s2, size_t n);
-//int				ft_strcmp(const char *s1, const char *s2);
+const char		*ft_strnstr(const char *string1, char *string2, size_t num);
+int				ft_strcmp(const char *string1, const char *string2);
 //int				ft_strncmp(const char *s1, const char *s2, size_t n);
 //int				ft_atoi(const char *str);
 

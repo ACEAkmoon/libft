@@ -16,7 +16,7 @@ int	ft_strcmp(const char *string1, const char *string2)
 		string1++;
 		string2++;
 	}
-	return (*(char*)string1 - *(char*)string2);
+	return (*string1 - *string2);
 }
 /*
 void main()
@@ -24,7 +24,7 @@ void main()
   char buffer1[13] = "DWgaOtP12df0";
   char buffer2[13] = "DWGAOTP12DF0";
 
-  int n = ft_memcmp(buffer1, buffer2, 13);
+  int n = ft_strcmp(buffer1, buffer2);
 
   if(n == 0)
     printf("'%s' is the == as '%s'.\n", buffer1, buffer2);

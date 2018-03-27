@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akrushin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/01 04:23:13 by akrushin          #+#    #+#             */
-/*   Updated: 2017/08/01 04:23:16 by akrushin         ###   ########.fr       */
+/*   Created: 2017/08/01 05:00:37 by akrushin          #+#    #+#             */
+/*   Updated: 2017/08/01 05:00:38 by akrushin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(const char *string1, const char *string2)
+int	ft_strncmp(const char *string1, const char *string2, size_t num)
 {
-	while (*string1 && *string2 && *string1 == *string2)
-	{
-		string1++;
-		string2++;
-	}
-	return (*string1 - *string2);
+    while (*string1 && *string2 && num--)
+    {
+        if(*string1 != *string2)
+            return (*string1 - *string2);
+        string1++;
+        string2++;
+    }
+    return (0);
 }

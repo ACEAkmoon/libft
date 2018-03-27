@@ -37,7 +37,7 @@ const char		*ft_strrchr(const char *string, int symbol);
 const char		*ft_strstr(const char *string1, char *string2);
 const char		*ft_strnstr(const char *string1, char *string2, size_t num);
 int				ft_strcmp(const char *string1, const char *string2);
-//int				ft_strncmp(const char *s1, const char *s2, size_t n);
+int				ft_strncmp(const char *string1, const char *string2, size_t num);
 //int				ft_atoi(const char *str);
 
 //char			*ft_strnew(size_t size);

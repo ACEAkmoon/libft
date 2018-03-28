@@ -65,14 +65,14 @@ int				ft_atoi(const char *string);
 //void			ft_putnbr_fd(int n, int fd);
 
 int				ft_isspace(int character);
-//int				ft_isalpha(int c);
+int				ft_isalpha(int character);
 int				ft_isdigit(int character);
-//int				ft_isalnum(int c);
-//int				ft_isascii(int c);
+int				ft_isalnum(int character);
+int				ft_isascii(int character);
 //int				ft_isprint(int c);
 //int				ft_islower(int c);
-//int				ft_isupper(int c);
-//int				ft_tolower(int c);
+int				ft_isupper(int character);
+int				ft_tolower(int character);
 //int				ft_toupper(int c);
 
 //t_list			*ft_lstnew(void const *content, size_t content_size);

@@ -38,7 +38,7 @@ const char		*ft_strstr(const char *string1, char *string2);
 const char		*ft_strnstr(const char *string1, char *string2, size_t num);
 int				ft_strcmp(const char *string1, const char *string2);
 int				ft_strncmp(const char *string1, const char *string2, size_t num);
-//int				ft_atoi(const char *str);
+int				ft_atoi(const char *string);
 
 //char			*ft_strnew(size_t size);
 //void			ft_strdel(char **as);
@@ -64,9 +64,9 @@ int				ft_strncmp(const char *string1, const char *string2, size_t num);
 //void			ft_putendl_fd(char const *s, int fd);
 //void			ft_putnbr_fd(int n, int fd);
 
-//int				ft_isspace(int c);
+int				ft_isspace(int character);
 //int				ft_isalpha(int c);
-//int				ft_isdigit(int c);
+int				ft_isdigit(int character);
 //int				ft_isalnum(int c);
 //int				ft_isascii(int c);
 //int				ft_isprint(int c);

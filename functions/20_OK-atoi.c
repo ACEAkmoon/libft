@@ -12,44 +12,30 @@
 //#include <stdio.h>
 //#include <cstdlib>  //Для работы с функцией system("pause")
 
-int	ft_atoi(const char *string)
+int    ft_atoi(const char *string)
 {
-	int i;
-	int negativ;
-	int number;
+    int negativ;
+    int result;
 
-	i = 0;
-	negativ = 0;
-	number = 0;
-
-	// \t - Перемещает позицию печати к следующей позиции горизонтальной табуляции. 
-	// \n - Перемещает позицию печати на одну строку вниз.
-	// \v - Перемещает позицию печати к следующей позиции вертикальной табуляции.
-	// \f - Выбрасывает текущую страницу и начинает печать со следующей.
-	// \r - Перемещает позицию печати в крайнее левое положение.
-
-	while ((string[i] == ' ') || (string[i] == '\t') || (string[i] == '\n')
-	|| (string[i] == '\v') || (string[i] == '\f') || (string[i] == '\r'))
-		i++;
-	if (string[i] == '-')
-		negativ = 1;
-	if ((string[i] == '-') || (string[i] == '+'))
-		i++;
-	while (string[i] >= '0' && string[i] <= '9')
-	{
-		number *= 10;
-		number += (string[i] - '0');
-		i++;
-	}
-	if (negativ == 1)
-		return (-number);
-	else
-		return (number);
+    negativ = 1;
+    result = 0;
+    while (ft_isspace(*string))
+        string++;
+    if (*string == '-')
+        negativ = -1;
+    if (*string == '-' || *string == '+')
+        string++;
+    while (ft_isdigit(*string))
+    {
+        result = result * 10 + (*string - 48);
+        string++;
+    }
+    return (result * negativ);
 }
 /*
 void main()
 {
-  char string_0[39] = "-19884627 Good day Bro!";
+  char string_0[39] = " -19884627 Good day Bro!";
   printf("%s\n", string_0);
   int in = ft_atoi(string_0);
   printf("\n\n%d\n\n", in);

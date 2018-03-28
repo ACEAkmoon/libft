@@ -69,11 +69,11 @@ int				ft_isalpha(int character);
 int				ft_isdigit(int character);
 int				ft_isalnum(int character);
 int				ft_isascii(int character);
-//int				ft_isprint(int c);
-//int				ft_islower(int c);
+int				ft_isprint(int character);
+int				ft_islower(int character);
 int				ft_isupper(int character);
 int				ft_tolower(int character);
-//int				ft_toupper(int c);
+int				ft_toupper(int character);
 
 //t_list			*ft_lstnew(void const *content, size_t content_size);
 //void			ft_lstdelone(t_list **alst, void (*del)(void *, size_t));

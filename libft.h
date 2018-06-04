@@ -1,8 +1,8 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-//# include <stdio.h>
-//# include <stdlib.h>
+# include <stdio.h>
+# include <stdlib.h>
 //# include <string.h>
 
 void 			*ft_memset(void *memptr, char val, size_t num);
@@ -13,8 +13,8 @@ void			*ft_memmove(void *destptr, const void *srcptr, size_t num);
 void			*ft_memchr(const void *memptr, int val, size_t num);
 int				ft_memcmp(const void *memptr1, const void *memptr2, size_t num);
 
-//void			*ft_memalloc(size_t size);
-//void			ft_memdel(void **ap);
+void			*ft_memalloc(size_t size);
+void			ft_memdel(void **ap);
 
 char			*ft_stralloc(const char *str);
 //char			*ft_strallocc(const char *s, char c);

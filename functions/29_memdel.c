@@ -17,6 +17,7 @@ void	ft_memdel(void **ap)
 	*ap = NULL;
 }
 
+/*
 void main() {
   int * buffer1 = (int*) malloc(10 * sizeof(int));             // выделяем память под 100 элементов массива типа int, с предварительной инициализацией
       //* buffer2 = (int*) calloc(10,  sizeof(int)),           // выделяем память под 100 элементов массива типа int, без инициализации
@@ -25,3 +26,4 @@ void main() {
   ft_memdel(buffer1);                                          // высвобождаем блок памяти buffer1
   //free(buffer3);                                             // высвобождаем блок памяти buffer2, его новый адрес, после перераспределения, хранится в buffer3
 }
+*/

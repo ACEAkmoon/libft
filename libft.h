@@ -40,8 +40,8 @@ int				ft_strcmp(const char *string1, const char *string2);
 int				ft_strncmp(const char *string1, const char *string2, size_t num);
 int				ft_atoi(const char *string);
 
-//char			*ft_strnew(size_t size);
-//void			ft_strdel(char **as);
+char			*ft_strnew(size_t size);
+void			ft_strdel(char **as);
 //void			ft_clr(char *s);
 //void			ft_striter(char *s, void (*f)(char *));
 //void			ft_striteri(char *s, void (*f)(unsigned int, char *));

@@ -42,7 +42,7 @@ int				ft_atoi(const char *string);
 
 char			*ft_strnew(size_t size);
 void			ft_strdel(char **as);
-//void			ft_clr(char *s);
+void			ft_strcrl(char *s);
 //void			ft_striter(char *s, void (*f)(char *));
 //void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 //char			*ft_strmap(char const *s, char (*f)(char));

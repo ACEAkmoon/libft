@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char  *ft_strcpy(char *destptr, char *srcptr)
+char  *ft_strcpy(char *destptr, const char *srcptr)
 {
   while (*srcptr)
     *destptr++ = *srcptr++;

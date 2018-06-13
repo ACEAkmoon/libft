@@ -12,7 +12,7 @@
 
 #include "../libft.h"
 
-char    *ft_strncpy(char *destptr, char *srcptr, unsigned int num)
+char    *ft_strncpy(char *destptr, const char *srcptr, unsigned int num)
 {
     unsigned int    save_num;
 

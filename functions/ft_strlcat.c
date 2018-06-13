@@ -12,11 +12,14 @@
 
 unsigned int    ft_strlcat(char *destptr, char *srcptr, unsigned int size)
 {
-  while (*destptr && size > 0 && size--)
+  unsigned int  nsize;
+
+  nsize = size;
+  while (*destptr && nsize > 0 && nsize--)
     destptr++;
-  while (*srcptr && size > 1 && size--)
+  while (*srcptr && nsize > 1 && nsize--)
     *destptr++ = *srcptr++;
-  if (size == 1)
+  if (nsize == 1)
     *destptr = '\0';
-  return (destptr);
+  return (size - nsize);
 }

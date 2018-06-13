@@ -15,11 +15,13 @@
 char    *ft_strncpy(char *destptr, const char *srcptr, unsigned int num)
 {
     unsigned int    save_num;
+    char *pointer_destptr;
 
     save_num = num;
+    pointer_destptr = destptr;
     while (num-- && *srcptr)
         *destptr++ = *srcptr++;
     if (num < save_num)
       ft_bzero(destptr, num);
-    return (destptr);
+    return (pointer_destptr);
 }

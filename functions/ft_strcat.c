@@ -12,10 +12,13 @@
 
 #include "../libft.h"
 
-char	*ft_strcat(char *destptr, char *srcptr)
+char    *ft_strcat(char *destptr, char *srcptr)
 {
+    char *pointer_destptr;
+    
+    pointer_destptr = destptr;
     while (*destptr)
         destptr++;
     ft_strcpy(destptr, srcptr);
-    return (destptr);
+    return (pointer_destptr);
 }

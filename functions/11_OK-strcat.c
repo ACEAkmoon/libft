@@ -11,12 +11,15 @@
 //#include <stdio.h>
 //#include <cstdlib>  //Для работы с функцией system("pause")
 
-char	*ft_strcat(char *destptr, char *srcptr)
+char    *ft_strcat(char *destptr, char *srcptr)
 {
+    char *pointer_destptr;
+    
+    pointer_destptr = destptr;
     while (*destptr)
         destptr++;
     ft_strcpy(destptr, srcptr);
-    return (destptr);
+    return (pointer_destptr);
 }
 
 /*
@@ -24,9 +27,11 @@ void main()
 {
   char string_0[99] = "Here we write down our row: ";
   char string_1[39] = "This is a test of the strcat function";
+  char *sum;
+  
   printf("%s\n%s", string_0, string_1);
-  ft_strcat(string_0, string_1);
-  printf("\n\n%s\n\n", string_0);
+  sum = ft_strcat(string_0, string_1);
+  printf("\n\n%s\n\n", sum);
   //system("pause"); // Команда задержки экрана
 }
 */

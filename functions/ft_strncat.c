@@ -15,8 +15,11 @@
 char    *ft_strncat(char *destptr, char *srcptr, int num)
 {
   char bufer[num];
+  char *pointer_destptr;
+    
+  pointer_destptr = destptr;
   ft_memcpy(bufer, srcptr, num);
   bufer[num] = '\0';
   ft_strcat(destptr, bufer);
-  return (destptr);
+  return (pointer_destptr);
 }

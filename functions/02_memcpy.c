@@ -20,9 +20,11 @@ void main()
 {
   char string_0[] = "The memcpy function copies the num bytes of the first memory block";
   char string_1[] = "This is a test of the memset function";
+  char *sum;
+  
   printf("%s\n%s", string_0, string_1);
-  ft_memcpy(string_0, string_1, 10);
-  printf("\n\n%s\n\n", string_0);
+  sum = ft_memcpy(string_0, string_1, 10);
+  printf("\n\n%s\n\n", sum);
   //system("pause"); // Команда задержки экрана
 }
 */

@@ -12,8 +12,11 @@
 
 char  *ft_strcpy(char *destptr, const char *srcptr)
 {
+  char *pointer_destptr;
+  
+  pointer_destptr = destptr;
   while (*srcptr)
     *destptr++ = *srcptr++;
   *destptr = '\0';
-  return (destptr);
+  return (pointer_destptr);
 }

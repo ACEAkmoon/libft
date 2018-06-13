@@ -11,21 +11,24 @@
 
 char  *ft_strcpy(char *destptr, const char *srcptr)
 {
+  char *pointer_destptr;
+  
+  pointer_destptr = destptr;
   while (*srcptr)
     *destptr++ = *srcptr++;
   *destptr = '\0';
-  return (destptr);
+  return (pointer_destptr);
 }
 
 /*
 void main()
 {
-  char string_0[7] = "Drive ";
-  char string_1[9] = "Delorean";
+  char string_0[40] = "";
+  char string_1[39] = "This is a test of the strcpy function";
   char *sum;
   
   printf("%s\n%s", string_0, string_1);
-  sum = ft_strjoin(string_0, string_1);
+  sum = ft_strcpy(string_0, string_1);
   printf("\n\n%s\n\n", sum);
   //system("pause"); // Команда задержки экрана
 }

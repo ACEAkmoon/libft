@@ -18,8 +18,6 @@ void			ft_memdel(void **ap);
 
 char			*ft_stralloc(const char *str);
 //char			*ft_strallocc(const char *s, char c);
-////char			*ft_stpcpy(char *dst, const char *src);
-////char			*ft_stpcpyc(char *dst, const char *src, char c);
 //unsigned int	ft_strcount(const char *s, char c);
 //char			*ft_strqdupc(const char **s1, char c);
 //size_t			ft_strlenc(const char *s, char c);

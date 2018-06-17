@@ -17,11 +17,6 @@ void			*ft_memalloc(size_t size);
 void			ft_memdel(void **ap);
 
 char			*ft_stralloc(const char *str);
-//char			*ft_strallocc(const char *s, char c);
-//unsigned int	ft_strcount(const char *s, char c);
-//char			*ft_strqdupc(const char **s1, char c);
-//size_t			ft_strlenc(const char *s, char c);
-//void			ft_strfill(char **tab, const char *s, char c);
 
 int				ft_strlen(char *str);
 char			*ft_strdup(const char *src);

@@ -3,6 +3,7 @@
 
 # include <stdio.h>
 # include <stdlib.h>
+# include <unistd.h>
 //# include <string.h>
 
 void 			*ft_memset(void *memptr, char val, size_t num);
@@ -15,7 +16,6 @@ int				ft_memcmp(const void *memptr1, const void *memptr2, size_t num);
 
 void			*ft_memalloc(size_t size);
 void			ft_memdel(void **ap);
-
 char			*ft_stralloc(const char *str);
 
 int				ft_strlen(char *str);
@@ -46,9 +46,9 @@ char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s);
 char			**ft_strsplit(char const *s, char c);
-//char			*ft_itoa(int n);
-//void			ft_putchar(char c);
-//void			ft_putstr(char const *str);
+char			*ft_itoa(int n);
+void			ft_putchar(char c);
+void			ft_putstr(char const *s);
 //void			ft_putendl(char const *str);
 //void			ft_putnbr(int n);
 //void			ft_putchar_fd(char c, int fd);

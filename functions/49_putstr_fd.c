@@ -1,4 +1,4 @@
-//Функция putstr Выводит строку s на стандартный вывод
+//Функция putstr_fd Выводит строку s в дескриптор файла fd.
 //-------------------------------------------------------------------------------
 //write(1, &c, 1) -> (главный екран, передать в переменную "С", вывести один раз)
 
@@ -8,15 +8,8 @@
 //#include <cstdlib>  //Для работы с функцией system()
 //#include <unistd.h>
 
-void	ft_putstr(char const *str)
-{
-	ft_putstr_fd(str, 1);
-}
-
-/*
-void	ft_putstr(char const *s)
+void	ft_putstr_fd(char const *s, int fd)
 {
 	while (*s)
-		ft_putchar(*s++);
+		ft_putchar_fd(*s++, fd);
 }
-*/

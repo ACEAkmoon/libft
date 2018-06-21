@@ -37,7 +37,7 @@ t_list      *ft_lstnew(void const *content, size_t content_size)
 
 /*void    main(void)
 {
-    int content = "hello sir";
+    char content[10] = "hello sir";
     int cont_size = 5;
     t_list *test_list;
     char *str;

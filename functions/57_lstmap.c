@@ -10,36 +10,15 @@
 //#include <unistd.h>
 //#include <stdlib.h>
 
-t_list	*ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem))
-{
-	t_list	*ret;
-	t_list	*ret_last;
-
-	ret = ret_last = f(lst);
-	if (ret == NULL)
-		return (NULL);
-	
-	while (lst->next) {
-		lst = lst->next;
-		ret_last->next = f(lst);
-		if (ret_last->next == NULL)
-			return (NULL);
-		ret_last = ret_last->next;
-	}
-	return (ret);
-}
-
-
 t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	t_list	*sortie;
+	t_list	*ret;
 
 	if (lst)
 	{
-		sortie = f(lst);
-		sortie->next = ft_lstmap(lst->next, f);
-		return (sortie);
+		ret = f(lst);
+		ret->next = ft_lstmap(lst->next, f);
+		return (ret);
 	}
 	return (NULL);
 }
-

@@ -14,7 +14,7 @@ CC		= gcc
 
 NAME	= libft.a
 
-SRC		= functions/*.c
+SRC		= includes/*.c
 
 HEADER	= libft.h
 

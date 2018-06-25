@@ -13,19 +13,19 @@ typedef struct			s_list
 	struct s_list		*next;
 }						t_list;
 
-void 			*ft_memset(void *memptr, char val, size_t num);
+void 			*ft_memset(void *memptr, char val, unsigned int num);
 void			ft_bzero(void *memptr, size_t num);
-void			*ft_memcpy(void *destptr, const void *srcptr, size_t num);
-void			*ft_memccpy(void *destptr, const void *srcptr, int stop, size_t num);
+void			*ft_memcpy(void *destptr, const void *srcptr, unsigned int num);
+void			*ft_memccpy(void *destptr, const void *srcptr, int stop, unsigned int num);
 void			*ft_memmove(void *destptr, const void *srcptr, size_t num);
-void			*ft_memchr(const void *memptr, int val, size_t num);
-int				ft_memcmp(const void *memptr1, const void *memptr2, size_t num);
+void			*ft_memchr(const void *memptr, int val, unsigned int num);
+int				ft_memcmp(const void *memptr1, const void *memptr2, unsigned int num);
 
 void			*ft_memalloc(size_t size);
 void			ft_memdel(void **ap);
 char			*ft_stralloc(const char *str);
 
-int				ft_strlen(char *str);
+int				ft_strlen(const char *str);
 char			*ft_strdup(const char *src);
 char			*ft_strcpy(char *destptr, const char *src);
 char			*ft_strncpy(char *destptr, const char *srcptr, unsigned int num);
@@ -37,12 +37,12 @@ const char		*ft_strrchr(const char *string, int symbol);
 const char		*ft_strstr(const char *string1, char *string2);
 const char		*ft_strnstr(const char *string1, char *string2, size_t num);
 int				ft_strcmp(const char *string1, const char *string2);
-int				ft_strncmp(const char *string1, const char *string2, size_t num);
+int				ft_strncmp(const char *string1, const char *string2, unsigned int num);
 int				ft_atoi(const char *string);
 
 char			*ft_strnew(size_t size);
 void			ft_strdel(char **as);
-void			ft_strcrl(char *s);
+void			ft_strclr(char *s);
 void			ft_striter(char *s, void (*f)(char *));
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 char			*ft_strmap(char const *s, char (*f)(char));

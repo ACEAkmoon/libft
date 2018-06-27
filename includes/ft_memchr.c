@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void  *ft_memchr(const void *memptr, int val, unsigned int num)
+#include "../libft.h"
+
+void  *ft_memchr(const void *memptr, int val, size_t num)
 {
   unsigned int step;
 

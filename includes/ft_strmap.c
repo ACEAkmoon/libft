@@ -15,7 +15,7 @@
 char	*ft_strmap(char const *s, char (*f)(char))
 {
 	char			*new;
-	unsigned int	i;
+	size_t			i;
 
 	new = ft_stralloc(s);
 	if (new)

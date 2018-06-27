@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void    *ft_memcpy(void *destptr, const void *srcptr, unsigned int num)
+#include "../libft.h"
+
+void    *ft_memcpy(void *destptr, const void *srcptr, size_t num)
 {
   while (num--)
     ((char*)destptr)[num] = ((char*)srcptr)[num];

@@ -17,5 +17,5 @@ int	ft_strcmp(const char *string1, const char *string2)
 		string1++;
 		string2++;
 	}
-	return (*string1 - *string2);
+	return (*(unsigned char*)string1 - *(unsigned char*)string2);
 }

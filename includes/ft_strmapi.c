@@ -12,10 +12,10 @@
 
 #include "../libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(size_t, char))
 {
 	char			*new;
-	unsigned int	i;
+	size_t			i;
 
 	new = ft_stralloc(s);
 	if (new)

@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *memptr, char val, unsigned int num)
+#include "../libft.h"
+
+void	*ft_memset(void *memptr, char val, size_t num)
 {
 	while (num--)
 		((char*)memptr)[num] = val;

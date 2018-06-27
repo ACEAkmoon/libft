@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void    *ft_memccpy(void *destptr, void *srcptr, int stop, unsigned int num)
+#include "../libft.h"
+
+void    *ft_memccpy(void *destptr, const void *srcptr, int stop, size_t num)
 {
     while (num--)
     {

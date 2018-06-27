@@ -12,10 +12,10 @@
 
 #include "../libft.h"
 
-char    *ft_strncpy(char *destptr, const char *srcptr, unsigned int num)
+char    *ft_strncpy(char *destptr, const char *srcptr, size_t num)
 {
-    unsigned int    save_num;
-    char *pointer_destptr;
+    size_t		save_num;
+    char		*pointer_destptr;
 
     save_num = num;
     pointer_destptr = destptr;

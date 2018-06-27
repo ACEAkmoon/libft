@@ -12,11 +12,11 @@
 
 const char  *ft_strchr(const char *string, int symbol)
 {
-  while (*string)
+  while (1)
   {
     if (*string == symbol)
       return (string);
-    string++;
+    else if (*string++ == '\0')
+      return (0);
   }
-  return (0);
 }

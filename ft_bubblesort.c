@@ -28,6 +28,6 @@ void		ft_bubblesort(int *arr, size_t num)
 			step1++;
 			step2++;
 		}
-		num != 0 ? ft_bubblesort(arr, --num) : 0;
+		num != 0 ? ft_bubblesort(arr, --num) : (void)NULL;
 	}
 }

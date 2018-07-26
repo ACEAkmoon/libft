@@ -15,7 +15,7 @@
 int					ft_atoi(const char *string)
 {
 	int				negativ;
-	long long int	result;
+	long int		result;
 
 	negativ = 1;
 	result = 0;

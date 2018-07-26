@@ -15,9 +15,5 @@
 void	ft_strclr(char *s)
 {
 	if (s)
-	{
 		ft_bzero(s, ft_strlen(s));
-		//while (*s)
-		//	*s++ = '\0';
-	}
 }

@@ -24,8 +24,3 @@ int		ft_strncmp(const char *string1, const char *string2, size_t num)
 	else
 		return (0);
 }
-
-/*int		ft_strncmp(const char *string1, const char *string2, size_t num)
-{
-	return (ft_memcmp(string1, string2, num));
-}*/

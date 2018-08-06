@@ -14,13 +14,11 @@
 
 void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
 {
-	if (alst)
+	if (alst && *alst && del)
 	{
 		del((*alst)->content, (*alst)->content_size);
 		(*alst)->prev ? (*alst)->prev->next = (*alst)->next : 0;
 		(*alst)->next ? (*alst)->next->prev = (*alst)->prev : 0;
 		ft_memdel((void**)alst);
-		//free(*alst);
-		//*alst = NULL;
 	}
 }

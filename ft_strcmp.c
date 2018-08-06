@@ -10,17 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int		ft_strcmp(const char *string1, const char *string2)
 {
-	while (*string1 && *string2 && *string1 == *string2)
-	{
-		string1++;
-		string2++;
-	}
-	return (*(unsigned char*)string1 - *(unsigned char*)string2);
-}
-
-/*int		ft_strcmp(const char *string1, const char *string2)
-{
 	return (ft_memcmp(string1, string2, (ft_strlen(string2) + 1)));
-}*/
+}

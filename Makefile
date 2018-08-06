@@ -10,15 +10,19 @@
 #                                                                              #
 # **************************************************************************** #
 
-NOC		=\033[0m
-OKC		=\033[32m
-ERC		=\033[31m
-WAC		=\033[33m
-TSC		=\033[94;1m
+NAME	= libft.a
+
+NOC		= \033[0m
+OKC		= \033[32m
+ERC		= \033[31m
+WAC		= \033[33m
+TSC		= \033[94;1m
 
 CC		= gcc
-
-NAME	= libft.a
+CFLAGS	= -c -Wall -Wextra -Werror
+# key >> '-c' - Эта опция означает, что необходима только компиляция.
+# Из исходных файлов программы создаются объектные файлы в виде name.o. 
+# Компоновка не производится.
 
 SRC		= ft_lstmap.c ft_stralloc.c ft_strncpy.c ft_atoi.c ft_lstnew.c\
 	ft_strcat.c ft_strndup.c ft_bubblesort.c ft_memalloc.c ft_strchr.c\
@@ -34,16 +38,6 @@ SRC		= ft_lstmap.c ft_stralloc.c ft_strncpy.c ft_atoi.c ft_lstnew.c\
 	ft_lstiter.c ft_putstr_fd.c ft_strncmp.c
 
 OBJ		= $(SRC:.c=.o)
-
-OBJZ	= *.o *.gch
-
-RM		= rm -f
-
-# CFLAGS = -c -Wall -Wextra -Werror
-# key >> '-c' - Эта опция означает, что необходима только компиляция.
-# Из исходных файлов программы создаются объектные файлы в виде name.o. 
-# Компоновка не производится.
-CFLAGS	= -c -Wall -Wextra -Werror
 
 all:	$(NAME)
 
@@ -64,15 +58,15 @@ $(NAME): $(OBJ)
 		@echo -n =
 
 clean:
-		@$(RM) $(OBJZ)
+		@rm -f $(OBJ)
 		@echo "$(WAC)Removing OBJ path$(NOC)"
 
 fclean: clean
-		@$(RM) $(NAME)
+		@rm -f $(NAME)
 		@echo "$(WAC)Removing Libft.a$(NOC)"
 
 re:		fclean all
 
 # make будет запускать свой рецепт безоговорочно, независимо от того, 
 # существует ли файл с таким именем: цель 'clean' объявляется абстрактной.
-.PHONY:	clean fclean re
+.PHONY: all, $(NAME), clean, fclean, re

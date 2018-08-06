@@ -15,6 +15,6 @@
 int	ft_toupper(int character)
 {
 	if (ft_islower(character))
-		return (character + 65 - 97);
+		return (character - 32);
 	return (character);
 }

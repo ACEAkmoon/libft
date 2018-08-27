@@ -1,24 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_arrcount.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akrushin <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/22 13:04:54 by akrushin          #+#    #+#             */
-/*   Updated: 2018/06/22 13:04:57 by akrushin         ###   ########.fr       */
+/*   Created: 2018/07/02 16:33:40 by akrushin          #+#    #+#             */
+/*   Updated: 2018/07/02 16:33:42 by akrushin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *string, int symbol)
+size_t		ft_arrcount(const char *str, char c)
 {
-	int size;
+	size_t	i;
+	size_t	num_str;
 
-	size = ft_strlen(string) + 1;
-	while (size--)
-		if (string[size] == symbol)
-			return ((char*)string + size);
-	return (0);
+	i = 0;
+	num_str = 0;
+	while (*str)
+	{
+		if (i == 1 && *str == c)
+			i = 0;
+		else if (i == 0 && *str != c)
+		{
+			i = 1;
+			num_str++;
+		}
+		str++;
+	}
+	return (++num_str);
 }

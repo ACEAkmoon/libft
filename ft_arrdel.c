@@ -3,10 +3,13 @@
 
 void	ft_arrdel(char **arr)
 {
+	int i;
+
+	i = -1;
 	if (arr && *arr)
-		while (*arr)
+		while (arr[++i])
 		{
-			free(arr);
-			*arr++ = NULL;
+			free(arr[i]);
+			arr[i] = NULL;
 		}
 }
